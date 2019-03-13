@@ -1,0 +1,200 @@
+p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+h2 {
+    text-align: center;
+}
+
+body {
+    background-color: white;
+    color: black;
+}
+
+h5 {
+    text-transform: none;
+    font-family: Lato;
+}
+
+.navbar {
+    font-family: "loveloblack";
+}
+
+.content-section {
+    padding-top: 100px;
+}
+
+.content-section hr {
+    border-color: d3d3d3;
+    border-width: 4px;
+    width: 80%;
+    float: center;
+    clear: both;
+}
+
+.intro .intro-body .header {
+    position: relative;
+    top: 25%; 
+    font-family: "loveloblack";
+}
+
+.intro .intro-body .intro-text {
+    font-family: "loveloblack";
+    font-size: 1.5vw;
+    font-style: normal;
+}
+
+.intro .intro-body .brand-heading {
+    font-family: "loveloblack";
+    font-size: 3.2vw;
+    
+    margin-bottom: 150px;
+     
+
+}
+
+.btn-circle {
+    position: relative;
+    top: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center
+}
+.about-section {
+    background: white;
+    color: black;
+}
+
+.about-section .heading {
+}
+
+.about-section .sub-heading {
+    font-style: italic;
+    font-family: "Crimson Text"
+}
+
+.item-info p {
+    font-size: 16px;
+}
+
+.item-info hr {
+    /*border-color: #5084BB;*/
+    border-color: d3d3d3;
+    border-width: 4px;
+    width: 60px;
+    float: center;
+    clear: both;
+}
+
+h2 {
+    font-family: "loveloblack";
+}
+
+<-----------------------------Modals-------------------------------->
+.portfolio-modal .modal-content {
+    padding: 100px 0;
+    min-height: 100%;
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    background-clip: border-box;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.portfolio-modal .modal-content h2 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.portfolio-modal .modal-content img {
+    margin-bottom: 30px;
+}
+
+.portfolio-modal .modal-content .item-details {
+    margin: 30px 0;
+}
+
+.portfolio-modal .close-modal {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    width: 75px;
+    height: 75px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.portfolio-modal .close-modal:hover {
+    opacity: .3;
+}
+
+.portfolio-modal .close-modal .lr {
+    z-index: 1051;
+    width: 1px;
+    height: 75px;
+    margin-left: 35px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.portfolio-modal .close-modal .lr .rl {
+    z-index: 1052;
+    width: 1px;
+    height: 75px;
+    background-color: #2c3e50;
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.portfolio-modal .modal-backdrop {
+    display: none;
+    opacity: 0;
+}
+
+
+#events img:hover {
+    opacity: 0.5;
+}
+
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+  background-color: white;
+  opacity: 0.5;
+  width: 100%;
+  height:0;
+  transition: 1.0s ease;
+}
+
+.portfolio-item:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: black;
+  font-size: 24px;
+  font-family: loveloblack;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
