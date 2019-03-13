@@ -2,7 +2,7 @@
 import sys, os
 
 # Change this path to reflect the real directory where your django-project lives
-projects_location = "/home/t/ts/tsa/projects"
+projects_location = "/home/t/ts/tsa/public_html/projects"
 project_name = "tsa"
 
 sys.path.insert(0, projects_location)

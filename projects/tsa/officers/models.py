@@ -1,0 +1,43 @@
+from __future__ import unicode_literals
+
+from django.db import models
+from django.utils import timezone
+from datetime import date
+
+TSA_FACEBOOK_PIC="https://www.facebook.com/ucberkeleytsa/photos_stream?tab=photos_albums"
+
+class Officer(models.Model):
+    first_name = models.CharField(max_length=30)
+    last_name = models.CharField(max_length=30)
+    grad_year = models.IntegerField()
+    description = models.TextField()
+    major = models.CharField(max_length=30, default='Undeclared')
+    position = models.CharField(max_length=30, default='Intern')
+    added_date = models.DateTimeField(default=timezone.now)
+    picture = models.ImageField(upload_to='officer_pics/', default='event_pics/circus.png')
+    ordering = models.IntegerField(default=10)
+
+    def __str__(self):
+        return '{0} {1}'.format(self.first_name, self.last_name)
+
+class Event(models.Model):
+    event_name = models.CharField(max_length=30)
+    description = models.TextField()
+    location = models.TextField()
+    event_date = models.DateField(default=date.today)
+    picture = models.ImageField(upload_to='event_pics/', default='event_pics/circus.png')
+    facebook_link = models.URLField()
+    picture_link = models.URLField(default=TSA_FACEBOOK_PIC)
+
+    def __str__(self):
+        return self.event_name
+
+class Sponsor(models.Model):
+    name = models.CharField(max_length=30)
+    description = models.TextField()
+    picture = models.ImageField(upload_to='sponsor/', default='sponsor/circus.png')
+    ordering = models.IntegerField()
+    link = models.URLField()
+
+    def __str__(self):
+        return self.name

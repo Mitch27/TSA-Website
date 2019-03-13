@@ -1,0 +1,253 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="University of California Berkeley Taiwanese Student Association 柏克萊加大台灣同學會">
+    <meta name="author" content="University of California Berkeley Taiwanese Student Association 柏克萊加大台灣同學會">
+
+    <title>UC Berkeley TSA| 柏克萊加大台灣同學會</title>
+
+    <!-- Bootstrap Core CSS -->
+    <!-- <link href="/static/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="{% static "vendor/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="{% static "vendor/font-awesome/css/font-awesome.min.css" %}" rel="stylesheet" type="text/css">
+
+    <link src="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato" />
+
+    <link href="{% static "fonts/loveloblack/loveloblack.css" %}" rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Crimson+Text:400italic' rel='stylesheet' type='text/css'>
+
+    <!-- Theme CSS -->
+    <link href="{% static "css/grayscale.css" %}" rel="stylesheet">
+    <link href="{% static "css/kennethCustom.css" %}" rel="stylesheet">
+    <!-- <link href="{% static "css/ml.css" %}" rel="stylesheet"> -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!-- Latest compiled and minified CSS -->
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">
+                    TSA<span class="light"> | Berkeley </span>
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#events">Events</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#officers">Officers</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="heading">
+                            <h1 class = "brand-heading">Taiwanese Student Association</h1>
+			    <a href="#about" class="btn btn-circle page-scroll">
+                                <i class="fa fa-angle-double-down animated"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="content-section text-center">
+        <div class ="about-section">
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class="section-title center">
+                        <h2 class="heading">About Us</h2>
+                    </div>
+                    <hr>
+                    <div class="clearfix"></div>
+                    <p align="left">The Taiwanese Student Association at UC Berkeley is a non-profit, non-political student organization that focuses on enriching the college experience of anyone who shares common interest in Taiwanese culture. Our goal is mainly to represent the Taiwanese community and strengthen its voice on and beyond the campus.</p>
+                    <p align="left">How does TSA relate to you? We hope to promote the awareness of Taiwanese culture to the entire student body as well as to build lasting friendships. TSA means more than a club. It is a place, a family, where everyone belongs to when you are away from home!
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Download Section -->
+    <section id="events" class="content-section text-center">
+        <div class="events-section">
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class ="section-title center">
+                        <h2 class="heading">Events</h2>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        {% block event %}
+                        {% endblock %}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="officers" class="content-section text-center">
+        <div class="officer-section">
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class="section-title center">
+                        <h2>Our Officers</h2>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        {% block officer %}
+                        {% endblock %}
+                    </div>
+
+                </div>
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <section id="officers" class="content-section text-center">
+      <iframe src="https://calendar.google.com/calendar/embed?src=tsa.berkeley%40gmail.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>SAY HELLO</h2>
+                <hr>
+                <p>We table on Sproul Plaza during weekdays 11AM - 2PM. Come say Hi!</p>
+                <p>Check out our Facebook page, or watch our KCON film productions on Youtube!</p>
+		<ul class="list-inline banner-social-buttons">
+                    <li>
+                        <a href="https://www.facebook.com/ucberkeleytsa" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.facebook.com/pg/ucberkeleytsa/photos" class="btn btn-default btn-lg"><i class="fa fa-camera"></i> <span class="network-name">Photos</span></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/berkeleytsa/" class="btn btn-default btn-lg"><i class="fa fa-instagram"></i> <span class="network-name">Instagram</span></a>
+                    </li>
+        		    <li>
+        			    <a href="https://www.youtube.com/channel/UCas05HT8ex0bwPtiuWv9-Dw" class="btn btn-default btn-lg"><i class="fa fa-youtube-play"></i> </span class="network-name">YouTube</span></a>
+        		    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+     <section id="officers" class="content-section text-center">
+        <div class="officer-section">
+            <div class="container">
+                <div class="col-lg-12">
+                    <div class="section-title center">
+                        <h2>Sponsors</h2>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                        {% block sponsor %}
+                        {% endblock %}
+                    </div>
+
+                </div>
+            <!-- </div> -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; TSA 2017</p>
+            <p>We are a student group acting independently of the University of California. We take full responsibility for our organization and this web site.</p>
+            <p>
+              <a href="https://www.ocf.berkeley.edu" target="_new"><img style="width:auto;height:auto;" src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.png" alt="Hosted by the OCF" width="128" height="36"></a>
+            </p>
+        </div>
+    </footer>
+
+    <!-- Portfolio Modals -->
+    {% block officercontent %}
+    {% endblock %}
+
+    {% block eventcontent %}
+    {% endblock %}
+
+
+    <!-- jQuery -->
+    <script src="{% static "vendor/jquery/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "vendor/bootstrap/js/bootstrap.min.js" %}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/static/js/jqBootstrapValidation.js"></script>
+    <!-- <script src="/static/js/contact_me.js"></script> -->
+
+    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
+
+    <!-- Theme JavaScript -->
+    <script src="{% static "js/grayscale.min.js" %}"></script>
+
+</body>
+
+</html>
